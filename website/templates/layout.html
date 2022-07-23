@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <title>Anime Ma</title>
     <link rel="stylesheet" href="../static/light.css" >
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <script src="../static/script.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
   </head>
@@ -36,6 +39,43 @@
         </div>
       </ul>
     </nav>
+    {% with messages = get_flashed_messages(with_category=True) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    {% if category == 'error' %}
+    <br>
+    <br>
+    <div align="center" class="alert" role="alert">
+      <button type="button" class="error-close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="error-card", align="center">
+        <div class="error-card-header error" align="center">
+          <span class="material-icons error">highlight_off</span>
+        </div>
+        <div class="error-card-main">
+          <div class="error-main-description">{{message}}</div>
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <br>
+    <br>
+    <div align="center" class="alert" role="alert">
+      <button type="button" class="success-close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="success-card", align="center">
+        <div class="success-card-header" align="center">
+          <span class="material-icons success">highlight_off</span>
+        </div>
+        <div class="success-card-main">
+          <div class="success-main-description">{{message}}</div>
+        </div>
+      </div>
+    </div>
+    
+    {% endif %}{% endfor %}{% endif %}{% endwith %}
 
 
     <hr>

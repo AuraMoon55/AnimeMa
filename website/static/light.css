@@ -10,6 +10,14 @@
   }
 }
 
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons')
+}
+
+
 
 body {
   background-color: var(--main-light);
@@ -146,4 +154,109 @@ input[type=checkbox]:checked ~ .menu{
 .dropdown li:hover {
  background-color: dimgray;
 }
+}
+
+
+.error-card {
+  width: 150px;                 
+  display: flex;                
+  flex-direction: column;     
+  border: 1px solid red;
+  border-radius: 4px;      
+  overflow: hidden;     
+  margin: 5px;                
+}
+
+.error-card-header {
+  color: red;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid red;
+  background-color: #FFEBEE;
+  padding: 5px 10px;
+}
+
+.error-card-main {
+  display: flex;              
+  flex-direction: column;     
+  justify-content: center;    
+  align-items: center;
+  padding: 15px 0;           
+}
+
+.material-icons {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.error {
+  color: darkred;
+}
+
+.error-main-description {
+  color: red;
+  font-size: 12px;
+  text-align: center;
+}
+
+.success-card {
+  width: 150px;                 
+  display: flex;                
+  flex-direction: column;     
+  border: 1px solid green;
+  border-radius: 4px;      
+  overflow: hidden;     
+  margin: 5px;                
+}
+
+.success-card-header {
+  color: lightgreen;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid green;
+  background-color: lightgreen;
+  padding: 5px 10px;
+}
+
+.success-card-main {
+  display: flex;              
+  flex-direction: column;     
+  justify-content: center;    
+  align-items: center;
+  padding: 15px 0;           
+}
+
+
+.success {
+  color: darkgreen;
+}
+
+.success-main-description {
+  color: green;
+  font-size: 12px;
+  text-align: center;
+}
+
+.foot-menu p {
+  font-style: italic;
+  font-family: Lora;
+  font-weight: 30;
+}
+
+.success-close {
+  position: absolute;
+  margin: 1px 61px;
+  padding: 1px;
+  background-color: lightgreen;
+  border-color: lightgreen
+}
+
+.error-close {
+  position: absolute;
+  margin: 1px 61px;
+  padding: 1px;
+  background-color: #FFEBEE;
+  border-color: #FFEBEE
 }
