@@ -1,13 +1,15 @@
 from flask import Flask
-from os import path
+import os
 from flask_login import LoginManager
-import json
+from dotenv import load_dotenv
 from flask_mail import Mail
+from flask_mongoengine import MongoEngine
 
-mail = Mail()
 
-with open("config.json", "rb") as data:
-  config = json.loads(data.read())
+load_dotenv()
+
+mongo = MongoEngine()
+
 
 def create_app():
   app = Flask(__name__)
@@ -16,10 +18,16 @@ def create_app():
     MAIL_SERVER = "smtp.gmail.com",
     MAIL_PORT = '465',
     MAIL_USE_SSL = True,
-    MAIL_USERNAME = config.get("mail_username"),
-    MAIL_PASSWORD = config.get("mail_pass")
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME"),
+    MAIL_PASSWORD = os.environ.get("MAIL_PASS")
   )
+  app.config['MONGODB_SETTINGS'] = {
+    "db": __name__,
+    "host": os.environ.get("MONGO_URI")
+  }
   mail.init_app(app)
+  mongo.init_app(app)
+  
 
   from .view import view
 
