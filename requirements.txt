@@ -11,3 +11,4 @@ Flask[async]
 pymongo[srv]
 flask-mongoengine
 python-dotenv
+flask-wtf

@@ -4,12 +4,8 @@
   --footer-light: #555;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
-  }
-}
 
+  
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -245,18 +241,102 @@ input[type=checkbox]:checked ~ .menu{
   font-weight: 30;
 }
 
-.success-close {
-  position: absolute;
-  margin: 1px 61px;
-  padding: 1px;
-  background-color: lightgreen;
-  border-color: lightgreen
+
+
+.err-rem, .succ-rem {
+  display: flexbox;
 }
 
-.error-close {
-  position: absolute;
-  margin: 1px 61px;
-  padding: 1px;
-  background-color: #FFEBEE;
-  border-color: #FFEBEE
+.radios {
+  display: flexbox;
+  height: 70%;
+  padding: 2%;
+  margin-right: 2%;
+  margin-left: 2%;
+  border-radius: 30%;
+  place-self: center center;
+  background-color: black;
+  align-items: space-between;
+  align-content: space-between;
+}
+
+.radios label{
+  color: ghostwhite;
+}
+
+.radios input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 1vh;
+  width: 1vh;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  transition: 0.4s all linear;
+}
+
+.radios input:checked {
+  border: 0.75vh solid white;
+}
+
+
+form {
+  padding: 5%;
+  background-color: dimgrey;
+  border-radius: 25%;
+  margin: 5%;
+  box-shadow: 3vh 4vh 9vh 2vh black;
+}
+
+form #query {
+  border-radius: 20%;
+  padding: 4%;
+  margin-bottom: 4%;
+  margin-top: 5%;
+  place-items: center center;
+}
+
+
+.subbtn button{
+  margin-bottom: 2%;
+  border-radius: 30%;
+  padding: 3%;
+}
+
+.subbtn button:hover, button:focus {
+  color: white;
+}
+
+.subbtn button:active{
+  background-color: #000;
+  color: white;
+}
+
+h3 {
+  place-self: center center;
+  align-self: center
+}
+
+footer p {
+  text-decoration: none;
+  color: whitesmoke;
+}
+footer p a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+
+#gotop {
+  --offset: 50px; 
+  position: sticky;
+  bottom: 10px;      
+  place-self: end;
+  align-self: left;
+  margin-top: calc(100vh + 10px);
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 10px;
+  color: #fff;
+  background: #000;
+  white-space: nowrap;
 }

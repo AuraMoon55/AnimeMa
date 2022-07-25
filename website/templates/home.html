@@ -8,26 +8,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-    <script src="../static/script.js"></script>
+    
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <nav class="navbar">
       <!-- LOGO -->
       <div class="logo">Anime Ma</div>
-      <!-- NAVIGATION MENU -->
-      <ul class="nav-links">
-        <!-- USING CHECKBOX HACK -->
-        <input type="checkbox" id="checkbox_toggle" />
-        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-        <!-- NAVIGATION MENUS -->
-        <div class="menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="/anime">Animes</a></li>
-          <li><a href="/genre">Genres</a></li>
-          <li><a href="/contact">Contact Us</a></li>
-        </div>
-      </ul>
     </nav>
     {% with messages = get_flashed_messages(with_category=True) %}
     {% if messages %}
@@ -36,9 +23,7 @@
     <br>
     <br>
     <div align="center" class="alert err-rem" role="alert">
-      <button type="button" class="error-close" data-dismiss="alert">
-        <span aria-hidden="true">&times;</span>
-      </button>
+      
       <div class="error-card", align="center">
         <div class="error-card-header error" align="center">
           <span class="material-icons error">highlight_off</span>
@@ -52,12 +37,10 @@
     <br>
     <br>
     <div align="center" class="alert succ-rem" role="alert">
-      <button type="button" class="success-close" data-dismiss="alert">
-        <span aria-hidden="true">&times;</span>
-      </button>
+      
       <div class="success-card", align="center">
         <div class="success-card-header" align="center">
-          <span class="material-icons success">highlight_off</span>
+          <span class="material-icons success">done_outline</span>
         </div>
         <div class="success-card-main">
           <div class="success-main-description">{{message}}</div>
@@ -66,23 +49,63 @@
     </div>
     
     {% endif %}{% endfor %}{% endif %}{% endwith %}
+    <br><br>
+    <div class="main">
+      <form action="/" methods="POST" align="center">
+        <input type="text" name="query" id="query" placeholder="Search Anime or Manga">
+        <br><br>
+        <div class="radios">
+          <input type="radio" name="manga" id="manga">
+          <label for="manga">Manga</label>
+          &Uscr;
+          <input type="radio" name="manga" id="anime">
+          <label for="anime">Anime</label>
+        </div>
+        <br>
+        <br>
+        <div class="subbtn" align="center">
+          <button type="submit">Search</button>
+        </div>
+      </form>
+      <br><br>
+    </div>
     
-    {% block content %}{% endblock %}
+    <h3 align="center">Results For {{query}}</h3>
+    <h6 align="center">Found {{results.length}}</h6>
+    {% for result in results %}
+    <div class="results" align="center">
+      <img src="{{result['img']}}">
+      <h5>{{result['title']}}</h5>
+      <br>
+      <table>
+      {% for key, value in result['about'].items() %}
+      <tr>
+        <td>{{key}}</td>
+        <td>{{value}}</td>
+      </tr>
+      {% endfor %}
+      </table>
+      <p>
+        {{result['description']}}
+      </p>
+      <a href="/info/{{result['hash']}}">Read More</a>
+    </div>
+    {% endfor %}
+    <br>
+    <i id="gotop">&#8593;</i>
+    
+    <br><br>
 
-
+    <br>
     <hr>
     <footer>
       <div class="foot-menu" align="center">
-        <a href="https//t.me/Horni_Senpaii", target="_blank">
-          <span>
-            <i class="fab fa-telegram">
-            </i>
-          </span>
-        </a>
         <p>
-          Copyright &copy; Aura Moon
+          Copyright &copy;<a href="//github.com/AuraMoon55" target="_blank"> Aura Moon
+          </a>
         </p>
       </div>
+      <script src="../static/script.js"></script>
     </footer>
   </body>
 
