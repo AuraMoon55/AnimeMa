@@ -2,7 +2,6 @@
 
 
 <h3 align="center">Overview</h3>
-<hr>
 
 
 This project is a website that searches and provides you with info of all search results for that anime or manga
