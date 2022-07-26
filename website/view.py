@@ -29,8 +29,8 @@ def get_results(cate, query):
     resp['img'] = result['image_url']
     resp['title'] = result['title']
     resp['about'] = {}
-    resp['description'] =[result['synopsis'][(x*24):((x*24)+24)] for x in range(len(result['synopsis'])//24)]
-    if cate == 'anime':
+    resp['description'] = result['synopsis']
+    i cate == 'anime':
       resp['about']['airing'] = result['airing']
       resp['about']['type'] = result['type']
       resp['about']['episodes'] = result['episodes']
