@@ -348,6 +348,7 @@ footer p a{
   box-shadow: 0vh 0vh 1vh 1vh dimgray;
   padding-top: 10%;
   padding-bottom: 10%;
+  text-align: space-around;
 }
 
 tr, table{
@@ -357,4 +358,5 @@ tr, table{
 
 td {
   border: 2.5px solid black;
+  padding: 1%;
 }
