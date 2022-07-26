@@ -1,8 +1,5 @@
 flask
 jinja2
-ujson
-werkzeug
 gunicorn
-dnspython 
 Flask[async]
 jikanpy
