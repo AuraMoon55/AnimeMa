@@ -1,15 +1,8 @@
 flask
-flask-login
-flask-mail
 jinja2
 ujson
 werkzeug
 gunicorn
 dnspython 
-pytz
 Flask[async]
-pymongo[srv]
-flask-mongoengine
-python-dotenv
-flask-wtf
 jikanpy
