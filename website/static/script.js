@@ -1,4 +1,5 @@
 const gototop = document.getElementById("gotop");
+const scri = document.getElementById("trans")
 
 
 
@@ -26,3 +27,12 @@ gototop.addEventListener(
     )
   }
 )
+
+
+window.onload = function(e){
+  if (/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)){
+    return scri.setAttribute("href", "main/light.css");
+  } else {
+    return;
+  }
+}

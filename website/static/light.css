@@ -343,6 +343,7 @@ footer p a{
 
 
 .results {
+  height: 70%;
   border-color: black;
   border-radius: 20%;
   box-shadow: 0vh 0vh 1vh 1vh dimgray;
@@ -357,13 +358,16 @@ tr, table{
   width: 70%;
   border: 2.5px solid black;
   margin: 5%;
+  align-items: center;
+  align-content: center;
 }
 
 td {
   border: 2.5px solid black;
   padding: 1%;
   align-content: center;
-  align-items: self;
+  align-items: center;
+  text-align: center;
 }
 
 .results p{
