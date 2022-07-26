@@ -1,0 +1,381 @@
+:root {
+  --main-light: #FFFFFF;
+  --nav-light: #000;
+  --footer-light: #555;
+}
+
+
+  
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons')
+}
+
+
+
+body {
+  background-color: var(--main-light);
+}
+/**
+nav {
+  background-color: var(--nav-light);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  justify-items: space-between;
+}
+**/
+footer {
+  background-color: var(--footer-light);
+  align-content: bottom;
+  align-self: bottom;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+
+.navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 20px;
+ background-color: #000;
+ color: #fff;
+}
+
+.nav-links a {
+ color: #fff;
+}
+/* LOGO */
+.logo {
+ font-size: 32px;
+}
+/* NAVBAR MENU */
+.menu {
+ padding: 20px;
+ display: flex;
+ gap: 1em;
+ font-size: 18px;
+}
+.menu li:hover {
+ background-color: dimgrey;
+ border-radius: 5px;
+ transition: 0.3s ease;
+}
+.menu li {
+ padding: 5px 14px;
+ list-style: none;
+}
+
+.menu li a {
+  text-decoration: none;
+}
+.dropdown li a{
+  text-decoration: none;
+}
+/* DROPDOWN MENU */
+.genres {
+ position: relative; 
+}
+.dropdown {
+ background-color: #333;
+ padding: 1em 0;
+ position: absolute; 
+ display: none;
+ border-radius: 8px;
+ top: 35px;
+}
+.dropdown li + li {
+ margin-top: 10px;
+}
+.dropdown li {
+ padding: 0.5em 1em;
+ width: 8em;
+ list-style: none;
+ text-align: center;
+}
+.dropdown li:hover {
+ background-color: #777;
+}
+.genres:hover .dropdown {
+ display: block;
+}
+
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+ display: none;
+} 
+/*HAMBURGER MENU*/
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+.menu { 
+ display:none;
+ position: absolute;
+ background-color: #333;
+ right: 0;
+ left: 0;
+ text-align: center;
+ padding: 16px 0;
+}
+.menu li:hover {
+ display: inline-block;
+ background-color: dimgrey;
+ transition: 0.3s ease;
+}
+.menu li + li {
+ margin-top: 12px;
+}
+input[type=checkbox]:checked ~ .menu{
+ display: block;
+}
+.hamburger {
+ display: block;
+}
+.dropdown {
+ top: 30px;
+ left: 0.5px;
+}
+.dropdown li:hover {
+ background-color: dimgray;
+}
+}
+
+
+.error-card {
+  width: 150px;                 
+  display: flex;                
+  flex-direction: column;     
+  border: 1px solid red;
+  border-radius: 4px;      
+  overflow: hidden;     
+  margin: 5px;                
+}
+
+.error-card-header {
+  color: red;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid red;
+  background-color: #FFEBEE;
+  padding: 5px 10px;
+}
+
+.error-card-main {
+  display: flex;              
+  flex-direction: column;     
+  justify-content: center;    
+  align-items: center;
+  padding: 15px 0;           
+}
+
+.material-icons {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.error {
+  color: darkred;
+}
+
+.error-main-description {
+  color: red;
+  font-size: 12px;
+  text-align: center;
+}
+
+.success-card {
+  width: 150px;                 
+  display: flex;                
+  flex-direction: column;     
+  border: 1px solid green;
+  border-radius: 4px;      
+  overflow: hidden;     
+  margin: 5px;                
+}
+
+.success-card-header {
+  color: lightgreen;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid green;
+  background-color: lightgreen;
+  padding: 5px 10px;
+}
+
+.success-card-main {
+  display: flex;              
+  flex-direction: column;     
+  justify-content: center;    
+  align-items: center;
+  padding: 15px 0;           
+}
+
+
+.success {
+  color: darkgreen;
+}
+
+.success-main-description {
+  color: green;
+  font-size: 12px;
+  text-align: center;
+}
+
+.foot-menu p {
+  font-style: italic;
+  font-family: Lora;
+  font-weight: 30;
+}
+
+
+
+.err-rem, .succ-rem {
+  display: flexbox;
+}
+
+.radios {
+  display: flexbox;
+  height: 70%;
+  padding: 2%;
+  margin-right: 2%;
+  margin-left: 2%;
+  border-radius: 30%;
+  place-self: center center;
+  background-color: black;
+  align-items: space-between;
+  align-content: space-between;
+}
+
+.radios label{
+  color: ghostwhite;
+}
+
+.radios input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 1vh;
+  width: 1vh;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  transition: 0.4s all linear;
+}
+
+.radios input:checked {
+  border: 0.75vh solid white;
+}
+
+
+form {
+  width: 70%;
+  height: 60%;
+  padding: 5%;
+  background-color: dimgrey;
+  border-radius: 25%;
+  margin: 5%;
+  margin-left: 10%;
+  box-shadow: 3vh 4vh 9vh 2vh black;
+}
+
+form #query {
+  border-radius: 20%;
+  padding: 4%;
+  margin-bottom: 4%;
+  margin-top: 5%;
+  place-items: center center;
+}
+
+
+.subbtn button{
+  margin-bottom: 2%;
+  border-radius: 30%;
+  padding: 3%;
+}
+
+.subbtn button:hover, button:focus {
+  color: white;
+}
+
+.subbtn button:active{
+  background-color: #000;
+  color: white;
+}
+
+h3 {
+  place-self: center center;
+  align-self: center
+}
+
+footer p {
+  text-decoration: none;
+  color: whitesmoke;
+}
+footer p a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+
+#gotop {
+  --offset: 50px; 
+  position: sticky;
+  bottom: 10px;      
+  place-self: end;
+  align-self: left;
+  margin-top: calc(100vh + 10px);
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 10px;
+  color: #fff;
+  background: #000;
+  white-space: nowrap;
+}
+
+
+.results {
+  border-color: black;
+  border-radius: 20%;
+  box-shadow: 0vh 0vh 1vh 1vh dimgray;
+  width: 70%;
+  height: 80%;
+  align-self: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  text-align: space-around;
+  margin-right: 5%;
+  margin-left: 15%;
+}
+
+tr, table{
+  width: 60%;
+  border: 5px solid black;
+  margin: 5%;
+  align-items: center;
+  align-content: center;
+}
+
+td {
+  border: 5px solid black;
+  padding: 1.5%;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.results p{
+  font-size: 1vh;
+  margin: 2vh;
+}
