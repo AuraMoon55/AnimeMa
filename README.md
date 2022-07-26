@@ -1,4 +1,4 @@
-<h2 align="center">AnimeMa - Anime & Manga Info Provider<h2>
+<h2 align="center">AnimeMa - Anime & Manga Info Provider</h2>
 
 
 <h3 align="center">Overview</h3>
