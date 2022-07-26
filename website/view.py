@@ -32,6 +32,7 @@ def get_results(cate, query):
     resp['description'] = []
     num = int(len(result['synopsis'])/16)
     for x in range(num):
+      x = x*16
       resp['description'].append(result['synopsis'][(x):(x+17)])
     if cate == 'anime':
       resp['about']['airing'] = result['airing']
