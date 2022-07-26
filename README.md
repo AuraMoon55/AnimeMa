@@ -26,6 +26,8 @@ You have to fill query in search bar and choose your preferred type **ANIME** or
 
 - `JikanPy`
 
+- `Gunicorn`
+
 <hr>
 
 
