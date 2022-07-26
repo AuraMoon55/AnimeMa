@@ -354,8 +354,18 @@ footer p a{
   margin-left: 5%;
 }
 
-tr, table{
+tr{
   width: 70%;
+  border: 0.5px solid black;
+  margin: 5%;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+table {
+  height: 200px;
+  width: 212px;
   border: 0.5px solid black;
   margin: 5%;
   align-items: center;
@@ -372,12 +382,13 @@ td {
 }
 
 .results p{
-  font-size: 3vh;
+  font-size: 18px;
   margin: 2vh;
 }
 
 
 .results img{
-  width: 300;
-  height: 175;
+  width: 150px;
+  height: 200px;
 }
+
