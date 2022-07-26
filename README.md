@@ -6,6 +6,8 @@
 
 This project is a website that searches and provides you with info of all search results for that anime or manga
 
+<hr>
+
 <h3 align="center">Usage</h3>
 
 You have to fill query in search bar and choose your preferred type **ANIME** or **MANGA**
