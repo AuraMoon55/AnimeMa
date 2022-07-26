@@ -33,7 +33,13 @@ def get_results(cate, query):
     num = int(len(result['synopsis'])/16)
     for x in range(num):
       x = x*24
-      resp['description'].append(result['synopsis'][(x):(x+24)])
+      line = result['synopsis'][(x):(x+24)]
+      w = 0
+      while line[-1] != " ":
+        line = line[:-1]
+        w += 1
+      x = int(((x+24)-w)/24)
+      resp['description'].append(line)
     resp['description'].append(result['synopsis'][(x+24):])
     if cate == 'anime':
       resp['about']['airing'] = result['airing']
