@@ -6,8 +6,7 @@ view = Blueprint("view", __name__)
 
 @view.route("/", methods=("GET", "POST"))
 async def home():
-  if request.method == 'POST':
-
+  if request.args:
     if not request.args['manga']:
       flash('Please Choose Type Of Query', category='error')
 
