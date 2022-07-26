@@ -37,7 +37,7 @@ def get_results(cate, query):
       resp['about']['rating'] = result['rated']
       resp['about']['score'] = result['score']
       resp['about']['start_date'] = result['start_date'][:10]
-      resp['about']['end_date'] = (result['end_date'][:10] or 'N/A')
+      resp['about']['end_date'] = (result['end_date'] or 'N/A')[:10]
     else:
       resp['about']['publishing'] = result['publishing']
       resp['about']['type'] = result['type']
@@ -45,6 +45,6 @@ def get_results(cate, query):
       resp['about']['volumes'] = result['volumes'] 
       resp['about']['score'] = result['score']
       resp['about']['start_date'] = result['start_date'][:10]
-      resp['about']['end_date'] = (result['end_date'][:10] or 'N/A')
+      resp['about']['end_date'] = (result['end_date'] or 'N/A')[:10]
     results.append(resp)
   return results
