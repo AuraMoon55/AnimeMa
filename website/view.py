@@ -30,21 +30,21 @@ def get_results(cate, query):
     resp['title'] = result['title']
     resp['about'] = {}
     resp['description'] = result['synopsis']
-  if cate == 'anime':
-    resp['about']['airing'] = result['airing']
-    resp['about']['type'] = result['type']
-    resp['about']['episodes'] = result['episodes']
-    resp['about']['rating'] = result['rated']
-    resp['about']['score'] = result['score']
-    resp['about']['start_date'] = result['start_date'][:10]
-    resp['about']['end_date'] = (result['end_date'][:10] or 'N/A')
-  else:
-    resp['about']['publishing'] = result['publishing']
-    resp['about']['type'] = result['type']
-    resp['about']['chapters'] = result['chapters']
-    resp['about']['volumes'] = result['volumes'] 
-    resp['about']['score'] = result['score']
-    resp['about']['start_date'] = result['start_date'][:10]
-    resp['about']['end_date'] = (result['end_date'][:10] or 'N/A')
-  results.append(resp)
+    if cate == 'anime':
+      resp['about']['airing'] = result['airing']
+      resp['about']['type'] = result['type']
+      resp['about']['episodes'] = result['episodes']
+      resp['about']['rating'] = result['rated']
+      resp['about']['score'] = result['score']
+      resp['about']['start_date'] = result['start_date'][:10]
+      resp['about']['end_date'] = (result['end_date'][:10] or 'N/A')
+    else:
+      resp['about']['publishing'] = result['publishing']
+      resp['about']['type'] = result['type']
+      resp['about']['chapters'] = result['chapters']
+      resp['about']['volumes'] = result['volumes'] 
+      resp['about']['score'] = result['score']
+      resp['about']['start_date'] = result['start_date'][:10]
+      resp['about']['end_date'] = (result['end_date'][:10] or 'N/A')
+    results.append(resp)
   return results
