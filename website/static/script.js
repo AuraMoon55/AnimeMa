@@ -1,6 +1,6 @@
 const gototop = document.getElementById("gotop");
 const scri = document.getElementById("trans")
-
+const ua = navigator.userAgent
 
 
 setTimeout(function() {

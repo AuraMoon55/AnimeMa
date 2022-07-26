@@ -356,7 +356,7 @@ footer p a{
 
 tr, table{
   width: 70%;
-  border: 2.5px solid black;
+  border: 0.5px solid black;
   margin: 5%;
   align-items: center;
   align-content: center;
@@ -364,7 +364,7 @@ tr, table{
 }
 
 td {
-  border: 2.5px solid black;
+  border: 1px solid black;
   padding: 1%;
   align-content: center;
   align-items: center;
@@ -378,6 +378,6 @@ td {
 
 
 .results img{
-  border-radius: 25%;
-  border-color: ghostwhite;
+  width: 70%;
+  height: 70%;
 }
