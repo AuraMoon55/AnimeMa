@@ -16,7 +16,7 @@
       <!-- LOGO -->
       <div class="logo">Anime Ma</div>
     </nav>
-    {% with messages = get_flashed_messages(with_category=True) %}
+    {% with messages = get_flashed_messages(with_categories=True) %}
     {% if messages %}
     {% for category, message in messages %}
     {% if category == 'error' %}
