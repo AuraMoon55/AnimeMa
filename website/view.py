@@ -34,6 +34,7 @@ def get_results(cate, query):
     for x in range(num):
       x = x*16
       resp['description'].append(result['synopsis'][(x):(x+16)])
+    resp['description'].append(result['synopsis'][-16:])
     if cate == 'anime':
       resp['about']['airing'] = result['airing']
       resp['about']['type'] = result['type']
