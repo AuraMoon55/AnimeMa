@@ -7,13 +7,13 @@ view = Blueprint("view", __name__)
 @view.route("/", methods=("GET", "POST"))
 async def home():
   if request.args:
-    if not request.args['manga']:
+    if not request.args['type']:
       flash('Please Choose Type Of Query', category='error')
 
     if not request.args['query']:
       flash('Please Enter Query To Search', category='error')
 
-    result = get_results(request.args['manga'], request.args['query'])
+    result = get_results(request.args['type'], request.args['query'])
     return render_template('home.html', results=result, query=request.args['query'])
 
 
