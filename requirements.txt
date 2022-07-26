@@ -12,3 +12,4 @@ pymongo[srv]
 flask-mongoengine
 python-dotenv
 flask-wtf
+jikanpy

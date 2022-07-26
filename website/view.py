@@ -1,6 +1,6 @@
 from flask.blueprints import Blueprint
 from flask import render_template, request, flash
-import secureme
+from jikanpy import Jikan
 
 view = Blueprint("view", __name__)
 
@@ -25,10 +25,28 @@ def get_results(cate, query):
   jikan = Jikan()
   res = jikan.search(cate, query)['results']
   results = []
-  for result in results:
+  for result in res:
     resp = {}
+    resp['img'] = result['image_url']
+    resp['title'] = result['title']
+    resp['about'] = {}
+    resp['description'] = result['synopsis']
+  with resp['about'] as about:
     if cate == 'anime':
-      resp['title'] = result['title']
-      
+      about['airing'] = result['airing']
+      about['type'] = result['type']
+      about['episodes'] = result['episodes']
+      about['rating'] = result['rated']
+      about['score'] = result['score']
+      about['start_date'] = result['start_date'][:10]
+      about['end_date'] = (result['end_date'][:10] or 'N/A')
     else:
-      
+      about['publishing'] = result['publishing']
+      about['type'] = result['type']
+      about['chapters'] = result['chapters']
+      about['volumes'] = result['volumes'] 
+      about['score'] = result['score']
+      about['start_date'] = result['start_date'][:10]
+      about['end_date'] = (result['end_date'][:10] or 'N/A')
+    results.append(resp)
+    return results

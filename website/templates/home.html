@@ -80,7 +80,7 @@
       <table>
       {% for key, value in result['about'].items() %}
       <tr>
-        <td>{{key}}</td>
+        <td>{{(key.capitalize()).replace('_', ' ')}}</td>
         <td>{{value}}</td>
       </tr>
       {% endfor %}
@@ -88,7 +88,6 @@
       <p>
         {{result['description']}}
       </p>
-      <a href="/info/{{result['hash']}}">Read More</a>
     </div>
     {% endfor %}
     <br>
