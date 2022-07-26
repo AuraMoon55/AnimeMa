@@ -360,3 +360,7 @@ td {
   border: 2.5px solid black;
   padding: 1%;
 }
+
+.results p{
+  font-size: 16px;
+}

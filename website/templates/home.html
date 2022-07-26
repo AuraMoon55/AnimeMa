@@ -89,7 +89,10 @@
       {% endfor %}
       </table>
       <p>
-        {{result['description']}}
+        {% for x in resp['description'] %}
+        {{x}}
+        <br>
+        {% endfor %}
       </p>
     </div>
     <br><br>
