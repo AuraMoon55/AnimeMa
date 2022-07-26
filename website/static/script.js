@@ -31,7 +31,7 @@ gototop.addEventListener(
 
 window.onload = function(e){
   if (/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)){
-    return scri.setAttribute("href", "main/light.css");
+    return scri.setAttribute("href", "website/static/light.css");
   } else {
     return;
   }
