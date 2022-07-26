@@ -360,6 +360,7 @@ tr, table{
   margin: 5%;
   align-items: center;
   align-content: center;
+  text-align: center;
 }
 
 td {
@@ -371,6 +372,12 @@ td {
 }
 
 .results p{
-  font-size: 2vh;
+  font-size: 3vh;
   margin: 2vh;
+}
+
+
+.results img{
+  border-radius: 25%;
+  border-color: ghostwhite;
 }
