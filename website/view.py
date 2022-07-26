@@ -30,7 +30,7 @@ def get_results(cate, query):
     resp['title'] = result['title']
     resp['about'] = {}
     resp['description'] = result['synopsis']
-    i cate == 'anime':
+    if cate == 'anime':
       resp['about']['airing'] = result['airing']
       resp['about']['type'] = result['type']
       resp['about']['episodes'] = result['episodes']
