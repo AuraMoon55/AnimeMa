@@ -18,7 +18,7 @@ async def home():
     return render_template('home.html', results=result, query=request.args['query'])
 
 
-  return render_template("home.html", form=form)
+  return render_template("home.html")
 
 
 def get_results(cate, query):
